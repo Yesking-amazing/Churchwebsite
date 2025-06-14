@@ -1,36 +1,157 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Divine Trinity Church Website
+
+A modern, responsive website for Divine Trinity Church in Wetzikon, Switzerland, built with Next.js 14, TypeScript, Tailwind CSS, and shadcn/ui components.
+
+## Features
+
+- 🎨 Modern, responsive design with beautiful UI components
+- 📱 Mobile-first approach with smooth animations
+- 📧 Working contact form with email functionality
+- 🎯 Smooth scrolling navigation
+- ⚡ Fast performance with Next.js 14 App Router
+- 🎭 Beautiful gradients and modern styling
+- 📝 Form validation with Zod and React Hook Form
+- 🔧 TypeScript for type safety
+
+## Tech Stack
+
+- **Framework**: Next.js 14 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui
+- **Form Handling**: React Hook Form with Zod validation
+- **Email**: Nodemailer with Gmail SMTP
+- **Icons**: Lucide React
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+- Gmail account for email functionality
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd divine-trinity-church
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Set up environment variables:
+```bash
+cp .env.example .env.local
+```
+
+4. Configure your Gmail credentials in `.env.local`:
+```env
+GMAIL_USER=divinetrinity.wetzikon@gmail.com
+GMAIL_APP_PASSWORD=your_gmail_app_password_here
+```
+
+### Gmail Setup for Email Functionality
+
+To enable the contact form email functionality:
+
+1. Go to your Google Account settings
+2. Navigate to Security > 2-Step Verification
+3. Scroll down to "App passwords"
+4. Generate a new app password for "Mail"
+5. Use this app password in your `.env.local` file
+
+### Running the Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the website.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/
+│   ├── api/contact/          # Contact form API endpoint
+│   ├── globals.css           # Global styles
+│   ├── layout.tsx           # Root layout
+│   └── page.tsx             # Homepage
+├── components/
+│   ├── ui/                  # shadcn/ui components
+│   ├── ContactForm.tsx      # Contact form component
+│   └── Navigation.tsx       # Navigation component
+└── lib/
+    └── utils.ts             # Utility functions
+```
 
-## Learn More
+## Customization
 
-To learn more about Next.js, take a look at the following resources:
+### Colors and Styling
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The website uses a blue and yellow color scheme representing trust and warmth. You can customize the colors in:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `src/app/globals.css` for global styles
+- Individual components for specific styling
+- Tailwind classes throughout the components
 
-## Deploy on Vercel
+### Content
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Update the church information in:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `src/app/page.tsx` - Main content, service times, contact info
+- `src/app/layout.tsx` - SEO metadata
+- `src/components/Navigation.tsx` - Navigation items
+
+### Email Configuration
+
+The contact form sends emails to `divinetrinity.wetzikon@gmail.com`. To change this:
+
+1. Update the email address in `src/app/api/contact/route.ts`
+2. Update your environment variables accordingly
+
+## Deployment
+
+### Vercel (Recommended)
+
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Add your environment variables in Vercel dashboard
+4. Deploy!
+
+### Other Platforms
+
+The website can be deployed to any platform that supports Next.js:
+
+- Netlify
+- Railway
+- DigitalOcean App Platform
+- AWS Amplify
+
+Make sure to set your environment variables on your chosen platform.
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## Support
+
+For support or questions about the website, please contact:
+- Email: divinetrinity.wetzikon@gmail.com
+
+## License
+
+This project is created for Divine Trinity Church. All rights reserved.
+
+---
+
+Built with ❤️ for the Divine Trinity Church community in Wetzikon, Switzerland.
