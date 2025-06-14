@@ -66,7 +66,7 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">
-                  We believe in showing God's love through our actions and service to others in our community.
+                  We believe in showing God&apos;s love through our actions and service to others in our community.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -128,7 +128,7 @@ export default function Home() {
               <CardContent>
                 <p className="text-lg font-semibold text-sky-500 mb-2">5:00 PM - 6:00 PM</p>
                 <CardDescription className="text-base">
-                  Deep dive into God's word with interactive discussions and prayer time.
+                  Deep dive into God&apos;s word with interactive discussions and prayer time.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -141,7 +141,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">Get In Touch</h2>
-            <p className="text-xl text-gray-600">We'd love to hear from you and answer any questions</p>
+            <p className="text-xl text-gray-600">We&apos;d love to hear from you and answer any questions</p>
           </div>
           
           <div className="grid lg:grid-cols-2 gap-12">
